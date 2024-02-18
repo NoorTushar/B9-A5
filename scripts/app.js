@@ -6,8 +6,30 @@ const seatCount = document.getElementById("seatCount");
 const tBodyElement = document.getElementById("tbody");
 const totalPriceElement = document.getElementById("totalPrice");
 const grandTotalElement = document.getElementById("grandTotal");
+const nextButtonElement = document.getElementById("nextButton");
+const phoneNumberField = document.getElementById("phone");
+const couponInputField = document.getElementById("coupon");
+const couponButtonElement = document.getElementById("couponButton");
 
 /**************/
+
+couponButtonElement.addEventListener("click", function () {
+   console.log(`coupon applied`);
+   couponValue = couponInputField.value;
+   if (couponValue === "NEW15") {
+      const totalPrice = Number(totalPriceElement.textContent);
+      const discount = 0.15;
+      const priceAfterDiscount = totalPrice - totalPrice * discount;
+      console.log(priceAfterDiscount);
+      grandTotalElement.textContent = priceAfterDiscount;
+   } else if (couponValue === "Coupon 20") {
+      const totalPrice = Number(totalPriceElement.textContent);
+      const discount = 0.2;
+      const priceAfterDiscount = totalPrice - totalPrice * discount;
+      console.log(priceAfterDiscount);
+      grandTotalElement.textContent = priceAfterDiscount;
+   }
+});
 
 // let the initial total seat remaining be dynamic from the start
 // display it on the front end dynamically
@@ -77,6 +99,50 @@ allSeats.forEach(function (seat) {
          totalPriceFromHTML = Number(totalPriceElement.textContent);
 
          grandTotalElement.textContent = totalPriceFromHTML;
+
+         // coupon part, when 4 tickets will be purchased:
+
+         if (seatCounter === 4) {
+            // enable field
+            couponInputField.disabled = false;
+
+            // enable button
+            couponButtonElement.disabled = false;
+            couponButtonElement.classList.add(
+               "bg-our-primary",
+               "border-our-primary",
+               "hover:bg-white",
+               "hover:text-our-primary",
+               "transition-all",
+               "duration-300"
+            );
+            couponButtonElement.classList.remove("bg-gray-400");
+         }
+
+         // before NEXT button is activated check whether one seat is booked and phone number is given
+
+         if (seatCounter > 0 && phoneNumberField.value !== "") {
+            nextButtonElement.disabled = false;
+            nextButtonElement.classList.add(
+               "bg-our-primary",
+               "border-our-primary",
+               "hover:bg-white",
+               "hover:text-our-primary",
+               "transition-all",
+               "duration-300"
+            );
+            nextButtonElement.classList.remove("bg-gray-400");
+         }
+      } else if (seatCounter >= 4) {
+         alert("You have already booked 4 seats");
       }
    });
 });
+
+// phoneNumberField.addEventListener("mouseenter", function () {
+//    if (phoneNumberField.value !== "") {
+//       console.log(`value ase`);
+//    } else {
+//       console.log(`value nai`);
+//    }
+// });
