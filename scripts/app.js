@@ -123,17 +123,6 @@ allSeats.forEach(function (seat) {
    });
 });
 
-/**
- <tr
-    class="*:font-medium *:text-base *:text-our-black"
->
-    <td colspan="2">Total Price</td>
-    <td class="text-right">
-    BDT <span id="totalPrice">0</span>
-    </td>
-</tr>
- */
-
 couponButtonElement.addEventListener("click", function () {
    console.log(`coupon applied`);
    couponValue = couponInputField.value;
