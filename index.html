@@ -690,19 +690,19 @@
                                  <th class="text-right px-0">Price</th>
                               </tr>
                            </thead>
-                           <tbody>
+                           <tbody id="tbody">
                               <!-- row 1 -->
-                              <tr>
+                              <!-- <tr>
                                  <td>C2</td>
                                  <td>Economy</td>
                                  <td class="text-right">550</td>
-                              </tr>
+                              </tr> -->
                               <!-- row 2 -->
-                              <tr>
+                              <!-- <tr>
                                  <td>C2</td>
                                  <td>Economy</td>
                                  <td class="text-right">550</td>
-                              </tr>
+                              </tr> -->
                            </tbody>
                            <tfoot class="border-t border-[#03071233]">
                               <!-- total row -->
@@ -711,7 +711,7 @@
                               >
                                  <td colspan="2">Total Price</td>
                                  <td class="text-right">
-                                    BDT <span>1100</span>
+                                    BDT <span id="totalPrice">0</span>
                                  </td>
                               </tr>
                            </tfoot>
@@ -743,7 +743,7 @@
                         class="*:font-medium *:text-base *:text-our-black flex items-center justify-between mt-4"
                      >
                         <p>Grand Total</p>
-                        <p>BDT <span>1100</span></p>
+                        <p>BDT <span id="grandTotal">0</span></p>
                      </div>
                      <!-- Grand Total End -->
                   </div>
@@ -795,8 +795,10 @@
                      </div>
 
                      <div>
+                        <!-- border-our-primary hover:bg-white hover:text-our-primary transition-all duration-300 -->
                         <button
-                           class="rounded-xl bg-our-primary text-white py-4 font-raleway font-extrabold text-lg border border-our-primary hover:bg-white hover:text-our-primary transition-all duration-300 mt-1"
+                           disabled
+                           class="rounded-xl bg-gray-400 text-white py-4 font-raleway font-extrabold text-lg border mt-1"
                         >
                            Next
                         </button>
