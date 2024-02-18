@@ -32,6 +32,8 @@ allSeats.forEach(function (seat) {
          seat.classList.add("bg-our-primary", "text-white");
          seat.classList.remove("bg-[#F7F8F8]", "text-[#03071280]");
 
+         seat.disabled = true;
+
          // get the seat name of the clicked button
          const seatName = seat.textContent.trim();
 
