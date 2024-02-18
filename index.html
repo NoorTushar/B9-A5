@@ -677,7 +677,14 @@
                               <tr
                                  class="*:font-medium *:text-base *:text-our-black border-b-2 border-dashed border-[#03071233]"
                               >
-                                 <th>Seat</th>
+                                 <th class="flex items-center gap-1">
+                                    Seat
+                                    <span
+                                       id="seat-counter"
+                                       class="bg-our-primary px-3 text-white rounded-lg text-sm font-bold"
+                                       >2</span
+                                    >
+                                 </th>
                                  <th>Class</th>
                                  <th class="text-right">Price</th>
                               </tr>
@@ -727,6 +734,15 @@
                         </button>
                      </div>
                      <!-- Apply Coupon Area End-->
+
+                     <!-- Grand Total Start -->
+                     <div
+                        class="*:font-medium *:text-base *:text-our-black flex items-center justify-between mt-4"
+                     >
+                        <p>Grand Total</p>
+                        <p>BDT <span>1100</span></p>
+                     </div>
+                     <!-- Grand Total End -->
 
                      <!-- Form Start -->
                      <form class="*:flex *:flex-col *:gap-4 *:mt-6">
@@ -803,17 +819,35 @@
       </main>
       <footer></footer>
       <!-- modal section start -->
-      <section class="bg-[#F2F1F1]">
-         <div class="bg-white mx-auto max-w-[718px] w-50% rounded-2xl">
-            <img src="images/success.png" alt="" />
-            <h2 class="text-[#27AE60] font-roboto">SUCCESS</h2>
-            <p>
-               Thank you for Booking Our Bus Seats. We are working hard to find
-               the best service and deals for you.
-            </p>
-            <p>Shortly you will find a confirmation in your email.</p>
+      <section
+         class="bg-[#F2F1F1] h-screen flex items-center justify-center bg-blend"
+      >
+         <div
+            class="bg-white mx-auto max-w-[718px] w-52% rounded-2xl text-center p-14"
+         >
+            <img class="mx-auto" src="images/success.png" alt="" />
+            <h2 class="text-[#27AE60] font-roboto text-2xl font-bold my-8">
+               SUCCESS
+            </h2>
             <div>
-               <button class="bg-[#27AE60]">Continue</button>
+               <p class="text-[#4A4A4A] text-xl font-medium font-roboto">
+                  Thank you for Booking Our Bus Seats.
+               </p>
+               <p class="text-[#4A4A4A] text-xl font-medium font-roboto">
+                  We are working hard to find the best service and deals for
+                  you.
+               </p>
+            </div>
+            <p class="text-[#4A4A4A] text-xl font-light font-roboto mt-4">
+               Shortly you will find a confirmation in your email.
+            </p>
+
+            <div>
+               <button
+                  class="bg-[#27AE60] text-white rounded-3xl px-24 py-4 font-semibold font-roboto text-xl mt-5"
+               >
+                  Continue
+               </button>
             </div>
          </div>
       </section>
