@@ -118,6 +118,7 @@
                      streamlined .
                   </p>
                   <a
+                     href="#ticketSection"
                      class="gap-2 text-xl font-bold text-our-black bg-our-primary px-6 lg:px-8 py-4 lg:py-5 rounded-xl cursor-pointer border border-[#1DD10066] hover:bg-white hover:text-our-primary transition-all duration-300"
                      >Buy Tickets</a
                   >
@@ -248,7 +249,7 @@
          <!-- offer section end -->
 
          <!-- ticket section start -->
-         <section class="bg-[#F7F8F8] py-14 lg:py-28">
+         <section id="ticketSection" class="bg-[#F7F8F8] py-14 lg:py-28">
             <!-- section title start -->
             <div class="text-center">
                <h1 class="font-raleway font-bold text-4xl text-our-black">
@@ -298,7 +299,7 @@
                               class="text-our-primary font-medium text-lg flex items-center bg-[#DDF8DA] p-4 gap-2 rounded-xl"
                            >
                               <img src="images/seat-green.png" alt="" />
-                              <span>40</span> Seats Left
+                              <span id="seatsLeftElement">40</span> Seats Left
                            </p>
                         </div>
                      </div>
@@ -671,22 +672,22 @@
                   <div class="bg-[#F7F8F8] border-2 rounded-2xl p-8">
                      <!-- Table -->
                      <div class="overflow-x-auto">
-                        <table class="table">
+                        <table class="table myTable">
                            <!-- head -->
                            <thead class="">
                               <tr
                                  class="*:font-medium *:text-base *:text-our-black border-b-2 border-dashed border-[#03071233]"
                               >
-                                 <th class="flex items-center gap-1">
+                                 <th class="flex items-center gap-1 px-0">
                                     Seat
                                     <span
-                                       id="seat-counter"
+                                       id="seatCount"
                                        class="bg-our-primary px-3 text-white rounded-lg text-sm font-bold"
-                                       >2</span
+                                       >0</span
                                     >
                                  </th>
-                                 <th>Class</th>
-                                 <th class="text-right">Price</th>
+                                 <th class="px-0">Class</th>
+                                 <th class="text-right px-0">Price</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -721,6 +722,7 @@
                      <!-- Apply Coupon Area Start-->
                      <div class="flex items-center relative">
                         <input
+                           disabled
                            class="rounded-xl px-4 py-4 pr-28 w-full outline-none"
                            type="text"
                            name=""
@@ -728,7 +730,8 @@
                            placeholder="Have any coupon?"
                         />
                         <button
-                           class="bg-our-primary text-white rounded-lg px-6 py-3 absolute right-[5px]"
+                           disabled
+                           class="bg-gray-400 text-white rounded-lg px-6 py-3 absolute right-[5px]"
                         >
                            Apply
                         </button>
@@ -743,74 +746,74 @@
                         <p>BDT <span>1100</span></p>
                      </div>
                      <!-- Grand Total End -->
-
-                     <!-- Form Start -->
-                     <form class="*:flex *:flex-col *:gap-4 *:mt-6">
-                        <div class="">
-                           <label
-                              class="text-base font-semibold text-our-black"
-                              for="name"
-                              >Passenger Name*</label
-                           >
-                           <input
-                              class="outline-none border border-[#0307121A] p-4 rounded-xl"
-                              type="text"
-                              name=""
-                              id="name"
-                              placeholder="Enter your name"
-                           />
-                        </div>
-
-                        <div class="">
-                           <label
-                              class="text-base font-semibold text-our-black"
-                              for="phone"
-                              >Phone Number*</label
-                           >
-                           <input
-                              class="outline-none border border-[#0307121A] p-4 rounded-xl"
-                              type="number"
-                              name=""
-                              id="phone"
-                              placeholder="Enter your phone number"
-                           />
-                        </div>
-
-                        <div class="">
-                           <label
-                              class="text-base font-semibold text-our-black"
-                              for="email"
-                              >Email ID</label
-                           >
-                           <input
-                              class="outline-none border border-[#0307121A] p-4 rounded-xl"
-                              type="text"
-                              name=""
-                              id="email"
-                              placeholder="Enter your email id"
-                           />
-                        </div>
-
-                        <div>
-                           <button
-                              class="rounded-xl bg-our-primary text-white py-4 font-raleway font-extrabold text-lg border border-our-primary hover:bg-white hover:text-our-primary transition-all duration-300 mt-1"
-                           >
-                              Next
-                           </button>
-                        </div>
-                     </form>
-                     <!-- Form End -->
-
-                     <!-- Terms and Conditions -->
-                     <div class="mt-6">
-                        <a class="underline text-our-black opacity-50" href=""
-                           >Terms and Conditions</a
-                        >
-                        <a class="underline text-our-black opacity-50" href=""
-                           >Cancellation Policy</a
-                        >
-                     </div>
                   </div>
+                  <!-- Form Start -->
+                  <form class="*:flex *:flex-col *:gap-4 *:mt-6">
+                     <div class="">
+                        <label
+                           class="text-base font-semibold text-our-black"
+                           for="name"
+                           >Passenger Name*</label
+                        >
+                        <input
+                           class="outline-none border border-[#0307121A] p-4 rounded-xl"
+                           type="text"
+                           name=""
+                           id="name"
+                           placeholder="Enter your name"
+                        />
+                     </div>
+
+                     <div class="">
+                        <label
+                           class="text-base font-semibold text-our-black"
+                           for="phone"
+                           >Phone Number*</label
+                        >
+                        <input
+                           class="outline-none border border-[#0307121A] p-4 rounded-xl"
+                           type="number"
+                           name=""
+                           id="phone"
+                           placeholder="Enter your phone number"
+                        />
+                     </div>
+
+                     <div class="">
+                        <label
+                           class="text-base font-semibold text-our-black"
+                           for="email"
+                           >Email ID</label
+                        >
+                        <input
+                           class="outline-none border border-[#0307121A] p-4 rounded-xl"
+                           type="text"
+                           name=""
+                           id="email"
+                           placeholder="Enter your email id"
+                        />
+                     </div>
+
+                     <div>
+                        <button
+                           class="rounded-xl bg-our-primary text-white py-4 font-raleway font-extrabold text-lg border border-our-primary hover:bg-white hover:text-our-primary transition-all duration-300 mt-1"
+                        >
+                           Next
+                        </button>
+                     </div>
+                  </form>
+                  <!-- Form End -->
+
+                  <!-- Terms and Conditions Start -->
+                  <div class="mt-6 flex justify-around items-center">
+                     <a class="underline text-our-black opacity-50" href=""
+                        >Terms and Conditions</a
+                     >
+                     <a class="underline text-our-black opacity-50" href=""
+                        >Cancellation Policy</a
+                     >
+                  </div>
+                  <!-- Terms and Conditions End -->
                </div>
             </div>
             <!-- ticket booking end -->
