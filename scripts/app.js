@@ -10,26 +10,10 @@ const nextButtonElement = document.getElementById("nextButton");
 const phoneNumberField = document.getElementById("phone");
 const couponInputField = document.getElementById("coupon");
 const couponButtonElement = document.getElementById("couponButton");
+const couponDivElement = document.getElementById("couponDiv");
+const tfootElement = document.getElementById("tfoot");
 
 /**************/
-
-couponButtonElement.addEventListener("click", function () {
-   console.log(`coupon applied`);
-   couponValue = couponInputField.value;
-   if (couponValue === "NEW15") {
-      const totalPrice = Number(totalPriceElement.textContent);
-      const discount = 0.15;
-      const priceAfterDiscount = totalPrice - totalPrice * discount;
-      console.log(priceAfterDiscount);
-      grandTotalElement.textContent = priceAfterDiscount;
-   } else if (couponValue === "Coupon 20") {
-      const totalPrice = Number(totalPriceElement.textContent);
-      const discount = 0.2;
-      const priceAfterDiscount = totalPrice - totalPrice * discount;
-      console.log(priceAfterDiscount);
-      grandTotalElement.textContent = priceAfterDiscount;
-   }
-});
 
 // let the initial total seat remaining be dynamic from the start
 // display it on the front end dynamically
@@ -137,6 +121,69 @@ allSeats.forEach(function (seat) {
          alert("You have already booked 4 seats");
       }
    });
+});
+
+/**
+ <tr
+    class="*:font-medium *:text-base *:text-our-black"
+>
+    <td colspan="2">Total Price</td>
+    <td class="text-right">
+    BDT <span id="totalPrice">0</span>
+    </td>
+</tr>
+ */
+
+couponButtonElement.addEventListener("click", function () {
+   console.log(`coupon applied`);
+   couponValue = couponInputField.value;
+   if (couponValue === "NEW15") {
+      const totalPrice = Number(totalPriceElement.textContent);
+      const discount = 0.15;
+
+      const tr = document.createElement("tr");
+      tr.classList.add("*:font-medium", "*:text-base", "*:text-our-black");
+
+      const td1 = document.createElement("td");
+      td1.setAttribute("colspan", "2");
+      td1.textContent = "Discount Value";
+
+      const td2 = document.createElement("td");
+      td2.classList.add("text-right");
+      td2.textContent = totalPrice * discount;
+
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tfootElement.appendChild(tr);
+
+      couponDivElement.classList.add("hidden");
+      const priceAfterDiscount = totalPrice - totalPrice * discount;
+
+      grandTotalElement.textContent = priceAfterDiscount;
+   } else if (couponValue === "Coupon 20") {
+      const totalPrice = Number(totalPriceElement.textContent);
+      const discount = 0.2;
+
+      const tr = document.createElement("tr");
+      tr.classList.add("*:font-medium", "*:text-base", "*:text-our-black");
+
+      const td1 = document.createElement("td");
+      td1.setAttribute("colspan", "2");
+      td1.textContent = "Discount Value";
+
+      const td2 = document.createElement("td");
+      td2.classList.add("text-right");
+      td2.textContent = totalPrice * discount;
+
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tfootElement.appendChild(tr);
+
+      couponDivElement.classList.add("hidden");
+      const priceAfterDiscount = totalPrice - totalPrice * discount;
+
+      grandTotalElement.textContent = priceAfterDiscount;
+   }
 });
 
 // phoneNumberField.addEventListener("mouseenter", function () {
