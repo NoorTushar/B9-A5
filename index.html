@@ -892,21 +892,19 @@
                            placeholder="Enter your email id"
                         />
                      </div>
-
-                     <div>
-                        <!-- border-our-primary hover:bg-white hover:text-our-primary transition-all duration-300 -->
-                        <button
-                           id="nextButton"
-                           disabled
-                           class="rounded-xl bg-gray-400 text-white py-4 font-raleway font-extrabold text-lg border mt-1"
-                           onclick="success()"
-                        >
-                           Next
-                        </button>
-                     </div>
                   </form>
                   <!-- Form End -->
-
+                  <div class="w-full mt-6">
+                     <!-- border-our-primary hover:bg-white hover:text-our-primary transition-all duration-300 -->
+                     <button
+                        id="nextButton"
+                        disabled
+                        class="rounded-xl bg-gray-400 text-white py-4 font-raleway font-extrabold text-lg border mt-1 w-full"
+                        onclick="success()"
+                     >
+                        Next
+                     </button>
+                  </div>
                   <!-- Terms and Conditions Start -->
                   <div class="mt-6 flex justify-around items-center">
                      <a class="underline text-our-black opacity-50" href=""
@@ -974,7 +972,10 @@
          </div>
       </footer>
       <!-- modal section start -->
-      <section id="modal" class="bg-[#f2f1f1c4] w-full h-screen top-0 left-0">
+      <section
+         id="modal"
+         class="bg-[#f2f1f1c4] hidden w-full h-screen top-0 left-0"
+      >
          <div class="h-screen flex items-center justify-center">
             <div
                class="bg-white mx-auto max-w-[718px] w-52% rounded-2xl text-center py-10 px-5 sm:p-14"
