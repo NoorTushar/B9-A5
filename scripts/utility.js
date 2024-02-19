@@ -59,6 +59,7 @@ function activateNextButton() {
    nextButtonElement.classList.remove("bg-gray-400");
 }
 
+// disabling Next Button Function Condition
 function disableNextButton() {
    nextButtonElement.disabled = true;
    nextButtonElement.classList.remove(
