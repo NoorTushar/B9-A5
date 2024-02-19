@@ -98,13 +98,11 @@
 
          <!-- Banner Section -->
          <div
-            class="hero min-h-[600px] lg:rounded-[36px] border-4 border-red-600"
+            class="hero min-h-[600px] lg:rounded-[36px]"
             style="background-image: url(images/banner.png)"
          >
             <div class="hero-overlay bg-opacity-30 lg:rounded-[36px]"></div>
-            <div
-               class="hero-content text-center text-neutral-content border-4 border-red-600"
-            >
+            <div class="hero-content text-center text-neutral-content">
                <div>
                   <h1
                      class="text-4xl lg:text-6xl font-raleway font-extrabold text-white"
@@ -191,6 +189,7 @@
             <!-- Coupon Container -->
             <div class="grid lg:grid-cols-2 gap-6 mt-12 mb-20">
                <!-- 1st Coupon -->
+               <!-- bg-[#F88C9C] rounded-3xl grid grid-cols-12 px-5 lg:pl-8 lg:pr-4 -->
                <div
                   class="bg-[#FFBF10] rounded-3xl grid grid-cols-12 px-5 lg:px-8"
                >
@@ -306,7 +305,7 @@
                   P.H Paribahan
                </h1>
                <p
-                  class="text-our-black opacity-60 text-lg max-w-[736px] mx-auto mt-6 mb-12"
+                  class="text-our-black opacity-60 text-lg max-w-[736px] w-[90%] mx-auto mt-6 mb-12"
                >
                   Yes, you can run unit tests and view the results directly
                   within the app. The integrated testing features allow for a
@@ -325,11 +324,13 @@
                      class="p-8 lg:p-12 flex flex-col justify-center items-start gap-8 col-span-12 lg:col-span-9"
                   >
                      <!-- header -->
-                     <div class="flex justify-between items-center w-full">
+                     <div
+                        class="flex justify-between items-center w-full flex-col md:flex-row gap-5"
+                     >
                         <!-- header left -->
                         <div class="flex gap-5">
                            <img
-                              class="object-contain"
+                              class="object-contain w-[15%] md:w-auto"
                               src="images/bus-logo.png"
                            />
                            <div>
@@ -390,7 +391,7 @@
                      <!-- body end -->
                   </div>
                   <!-- divider -->
-                  <div class="col-span-1">
+                  <div class="col-span-1 lg:block hidden">
                      <img
                         class="h-full"
                         src="images/info-devider-grey.png"
@@ -399,7 +400,7 @@
                   </div>
                   <!-- right -->
                   <div
-                     class="flex flex-col justify-center items-center gap-2 col-span-2"
+                     class="flex flex-col justify-center items-center gap-2 lg:col-span-2 col-span-12 pb-8 lg:p-0"
                   >
                      <img src="images/fare.png" alt="" />
                      <h3 class="font-raleway text-our-black text-3xl font-bold">
