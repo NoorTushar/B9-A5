@@ -58,3 +58,16 @@ function activateNextButton() {
    );
    nextButtonElement.classList.remove("bg-gray-400");
 }
+
+function disableNextButton() {
+   nextButtonElement.disabled = true;
+   nextButtonElement.classList.remove(
+      "bg-our-primary",
+      "border-our-primary",
+      "hover:bg-white",
+      "hover:text-our-primary",
+      "transition-all",
+      "duration-300"
+   );
+   nextButtonElement.classList.add("bg-gray-400");
+}

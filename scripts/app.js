@@ -110,6 +110,8 @@ allSeats.forEach(function (seat) {
          // before NEXT button is activated check whether one seat is booked and phone number is given
          if (seatCounter > 0 && phoneNumberField.value !== "") {
             activateNextButton();
+         } else {
+            disableNextButton();
          }
       } else if (seatCounter >= 4) {
          alert("You have already booked 4 seats");
@@ -131,10 +133,18 @@ couponButtonElement.addEventListener("click", function () {
 
 // Activating the next button
 phoneNumberField.addEventListener("change", function () {
-   activateNextButton();
+   if (seatCounter > 0 && phoneNumberField.value !== "") {
+      activateNextButton();
+   } else {
+      disableNextButton();
+   }
 });
 
 // Activating the next button
 phoneNumberField.addEventListener("keyup", function () {
-   activateNextButton();
+   if (seatCounter > 0 && phoneNumberField.value !== "") {
+      activateNextButton();
+   } else {
+      disableNextButton();
+   }
 });
