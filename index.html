@@ -32,7 +32,7 @@
       </script>
    </head>
 
-   <body id="body" class="font-inter relative">
+   <body id="body" class="font-inter">
       <header class="w-[100%] lg:w-[80%] mx-auto max-w-[1170px]">
          <!-- Navigation Bar -->
          <nav class="font-raleway py-2 lg:py-5 border-2 pr-4 md:pr-0">
@@ -804,6 +804,7 @@
                            id="nextButton"
                            disabled
                            class="rounded-xl bg-gray-400 text-white py-4 font-raleway font-extrabold text-lg border mt-1"
+                           onclick="success()"
                         >
                            Next
                         </button>
@@ -831,35 +832,38 @@
       <!-- modal section start -->
       <section
          id="modal"
-         class="hidden bg-[#f2f1f1c4] h-screen flex items-center justify-center bg-blend top-0 left-0 w-full"
+         class="bg-[#f2f1f1c4] w-full h-screen hidden top-0 left-0"
       >
-         <div
-            class="bg-white mx-auto max-w-[718px] w-52% rounded-2xl text-center p-14"
-         >
-            <img class="mx-auto" src="images/success.png" alt="" />
-            <h2 class="text-[#27AE60] font-roboto text-2xl font-bold my-8">
-               SUCCESS
-            </h2>
-            <div>
-               <p class="text-[#4A4A4A] text-xl font-medium font-roboto">
-                  Thank you for Booking Our Bus Seats.
+         <div class="h-screen flex items-center justify-center">
+            <div
+               class="bg-white mx-auto max-w-[718px] w-52% rounded-2xl text-center p-14"
+            >
+               <img class="mx-auto" src="images/success.png" alt="" />
+               <h2 class="text-[#27AE60] font-roboto text-2xl font-bold my-8">
+                  SUCCESS
+               </h2>
+               <div>
+                  <p class="text-[#4A4A4A] text-xl font-medium font-roboto">
+                     Thank you for Booking Our Bus Seats.
+                  </p>
+                  <p class="text-[#4A4A4A] text-xl font-medium font-roboto">
+                     We are working hard to find the best service and deals for
+                     you.
+                  </p>
+               </div>
+               <p class="text-[#4A4A4A] text-xl font-light font-roboto mt-4">
+                  Shortly you will find a confirmation in your email.
                </p>
-               <p class="text-[#4A4A4A] text-xl font-medium font-roboto">
-                  We are working hard to find the best service and deals for
-                  you.
-               </p>
-            </div>
-            <p class="text-[#4A4A4A] text-xl font-light font-roboto mt-4">
-               Shortly you will find a confirmation in your email.
-            </p>
 
-            <div>
-               <button
-                  id="modalCloseBtn"
-                  class="bg-[#27AE60] text-white rounded-3xl px-24 py-4 font-semibold font-roboto text-xl mt-5"
-               >
-                  Continue
-               </button>
+               <div>
+                  <button
+                     onclick="closeModal()"
+                     id="modalCloseBtn"
+                     class="bg-[#27AE60] text-white rounded-3xl px-24 py-4 font-semibold font-roboto text-xl mt-5"
+                  >
+                     Continue
+                  </button>
+               </div>
             </div>
          </div>
       </section>

@@ -1,7 +1,7 @@
 // will open up the modal
 function success() {
-   modal.classList.add("fixed");
    modal.classList.remove("hidden");
+   modal.classList.add("fixed");
    body.style.overflow = "hidden";
 }
 
@@ -10,6 +10,7 @@ function closeModal() {
    modal.classList.remove("fixed");
    modal.classList.add("hidden");
    body.style.overflow = "auto";
+   location.reload();
 }
 
 // after valid discount coupon is entered
