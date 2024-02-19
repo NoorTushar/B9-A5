@@ -32,7 +32,7 @@
       </script>
    </head>
 
-   <body class="font-inter">
+   <body id="body" class="font-inter relative">
       <header class="w-[100%] lg:w-[80%] mx-auto max-w-[1170px]">
          <!-- Navigation Bar -->
          <nav class="font-raleway py-2 lg:py-5 border-2 pr-4 md:pr-0">
@@ -830,7 +830,8 @@
       <footer></footer>
       <!-- modal section start -->
       <section
-         class="bg-[#F2F1F1] h-screen flex items-center justify-center bg-blend"
+         id="modal"
+         class="bg-[#f2f1f1c4] h-screen flex items-center justify-center bg-blend top-0 left-0 w-full"
       >
          <div
             class="bg-white mx-auto max-w-[718px] w-52% rounded-2xl text-center p-14"
@@ -854,6 +855,7 @@
 
             <div>
                <button
+                  id="modalCloseBtn"
                   class="bg-[#27AE60] text-white rounded-3xl px-24 py-4 font-semibold font-roboto text-xl mt-5"
                >
                   Continue

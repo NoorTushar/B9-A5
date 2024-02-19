@@ -13,6 +13,10 @@ const couponButtonElement = document.getElementById("couponButton");
 const couponDivElement = document.getElementById("couponDiv");
 const tfootElement = document.getElementById("tfoot");
 
+const body = document.getElementById("body");
+const modal = document.getElementById("modal");
+const modalCloseBtn = document.getElementById("modalCloseBtn");
+
 /**************/
 
 // let the initial total seat remaining be dynamic from the start
@@ -182,3 +186,6 @@ couponButtonElement.addEventListener("click", function () {
 //       console.log(`value nai`);
 //    }
 // });
+
+success();
+closeModal();

@@ -1,19 +1,11 @@
-// To get and set text to Elements
-
-function getInnerTextById(elementId) {
-   const element = document.getElementById(elementId);
-   const elementText = element.textContent;
-   return elementText;
+function success() {
+   modal.classList.add("fixed");
+   modal.classList.remove("hidden");
+   body.style.overflowY = "hidden";
 }
 
-function setInnerTextById(elementId, value) {
-   const element = document.getElementById(elementId);
-   element.textContent = value;
-}
-
-// To get value from Input Field
-function getInnerTextValueById(elementId) {
-   const element = document.getElementById(elementId);
-   const elementValue = element.value;
-   return elementValue;
+function closeModal() {
+   modal.classList.remove("fixed");
+   modal.classList.add("hidden");
+   body.style.overflowY = "auto";
 }
