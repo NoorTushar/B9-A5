@@ -108,18 +108,8 @@ allSeats.forEach(function (seat) {
          }
 
          // before NEXT button is activated check whether one seat is booked and phone number is given
-
          if (seatCounter > 0 && phoneNumberField.value !== "") {
-            nextButtonElement.disabled = false;
-            nextButtonElement.classList.add(
-               "bg-our-primary",
-               "border-our-primary",
-               "hover:bg-white",
-               "hover:text-our-primary",
-               "transition-all",
-               "duration-300"
-            );
-            nextButtonElement.classList.remove("bg-gray-400");
+            activateNextButton();
          }
       } else if (seatCounter >= 4) {
          alert("You have already booked 4 seats");
@@ -127,8 +117,8 @@ allSeats.forEach(function (seat) {
    });
 });
 
+// After the coupon button is active
 couponButtonElement.addEventListener("click", function () {
-   console.log(`coupon applied`);
    couponValue = couponInputField.value;
    if (couponValue === "NEW15") {
       applyDiscount(15);
@@ -139,12 +129,12 @@ couponButtonElement.addEventListener("click", function () {
    }
 });
 
-// phoneNumberField.addEventListener("mouseenter", function () {
-//    if (phoneNumberField.value !== "") {
-//       console.log(`value ase`);
-//    } else {
-//       console.log(`value nai`);
-//    }
-// });
+// Activating the next button
+phoneNumberField.addEventListener("change", function () {
+   activateNextButton();
+});
 
-// nextButton.addEventListener('click', )
+// Activating the next button
+phoneNumberField.addEventListener("keyup", function () {
+   activateNextButton();
+});
