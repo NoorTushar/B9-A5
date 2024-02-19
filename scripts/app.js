@@ -132,7 +132,7 @@ couponButtonElement.addEventListener("click", function () {
    couponValue = couponInputField.value;
    if (couponValue === "NEW15") {
       applyDiscount(15);
-   } else if (couponValue === "Coupon 20") {
+   } else if (couponValue === "Couple 20") {
       applyDiscount(20);
    } else {
       alert("Invalid Coupon Code");
