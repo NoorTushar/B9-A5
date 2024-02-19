@@ -35,7 +35,7 @@
    <body id="body" class="font-inter">
       <header class="w-[100%] lg:w-[80%] mx-auto max-w-[1170px]">
          <!-- Navigation Bar -->
-         <nav class="font-raleway py-2 lg:py-5 border-2 pr-4 md:pr-0">
+         <nav class="font-raleway py-2 lg:py-5 pr-4 md:pr-0">
             <div class="navbar p-0">
                <div class="navbar-start">
                   <div class="dropdown">
@@ -61,7 +61,7 @@
                      </div>
                      <ul
                         tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow w-52 *:text-our-black *:opacity-70 text-lg font-medium space-y-3"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow w-52 text-lg font-medium space-y-3 text-our-black bg-gray-200"
                      >
                         <!-- After Collapse -->
                         <li><a>Home</a></li>
@@ -98,11 +98,13 @@
 
          <!-- Banner Section -->
          <div
-            class="hero min-h-[550px]"
+            class="hero min-h-[600px] lg:rounded-[36px] border-4 border-red-600"
             style="background-image: url(images/banner.png)"
          >
-            <div class="hero-overlay bg-opacity-30"></div>
-            <div class="hero-content text-center text-neutral-content">
+            <div class="hero-overlay bg-opacity-30 lg:rounded-[36px]"></div>
+            <div
+               class="hero-content text-center text-neutral-content border-4 border-red-600"
+            >
                <div>
                   <h1
                      class="text-4xl lg:text-6xl font-raleway font-extrabold text-white"
@@ -122,6 +124,54 @@
                      class="gap-2 text-xl font-bold text-our-black bg-our-primary px-6 lg:px-8 py-4 lg:py-5 rounded-xl cursor-pointer border border-[#1DD10066] hover:bg-white hover:text-our-primary transition-all duration-300"
                      >Buy Tickets</a
                   >
+               </div>
+            </div>
+         </div>
+
+         <!-- Banner Cards -->
+         <div
+            class="grid md:grid-cols-3 gap-5 md:px-2 lg:px-10 md:justify-between mt-6 md:-mt-[74px] mx-4 md:mx-0 *:rounded-3xl *:bg-white *:border-b-2 *:border-our-primary *:p-4 *:md:p-4 *:lg:p-8 *:flex *:gap-4 *:items-center"
+         >
+            <!-- first card -->
+            <div class="">
+               <div>
+                  <img src="images/people.png" alt="" />
+               </div>
+               <div>
+                  <h3 class="text-our-black text-2xl lg:text-4xl font-bold">
+                     500K+
+                  </h3>
+                  <p class="text-our-black opacity-60 text-lg">
+                     Registered users
+                  </p>
+               </div>
+            </div>
+
+            <!-- second card -->
+            <div class="">
+               <div>
+                  <img src="images/ticket-cupon.png" alt="" />
+               </div>
+               <div>
+                  <h3 class="text-our-black text-2xl lg:text-4xl font-bold">
+                     1.7 lacks
+                  </h3>
+                  <p class="text-our-black opacity-60 text-lg">Tickets sold</p>
+               </div>
+            </div>
+
+            <!-- third card -->
+            <div class="">
+               <div>
+                  <img src="images/stoppage.png" alt="" />
+               </div>
+               <div>
+                  <h3 class="text-our-black text-2xl lg:text-4xl font-bold">
+                     80K+
+                  </h3>
+                  <p class="text-our-black opacity-60 text-lg">
+                     Rental partners
+                  </p>
                </div>
             </div>
          </div>
