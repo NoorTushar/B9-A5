@@ -91,10 +91,10 @@ allSeats.forEach(function (seat) {
          // coupon part, when 4 tickets will be purchased:
 
          if (seatCounter === 4) {
-            // enable field
+            // enable coupon field
             couponInputField.disabled = false;
 
-            // enable button
+            // enable coupon button
             couponButtonElement.disabled = false;
             couponButtonElement.classList.add(
                "bg-our-primary",
