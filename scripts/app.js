@@ -186,6 +186,3 @@ couponButtonElement.addEventListener("click", function () {
 //       console.log(`value nai`);
 //    }
 // });
-
-success();
-closeModal();
