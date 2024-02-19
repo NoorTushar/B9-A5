@@ -131,51 +131,11 @@ couponButtonElement.addEventListener("click", function () {
    console.log(`coupon applied`);
    couponValue = couponInputField.value;
    if (couponValue === "NEW15") {
-      const totalPrice = Number(totalPriceElement.textContent);
-      const discount = 0.15;
-
-      const tr = document.createElement("tr");
-      tr.classList.add("*:font-medium", "*:text-base", "*:text-our-black");
-
-      const td1 = document.createElement("td");
-      td1.setAttribute("colspan", "2");
-      td1.textContent = "Discount Value";
-
-      const td2 = document.createElement("td");
-      td2.classList.add("text-right");
-      td2.textContent = totalPrice * discount;
-
-      tr.appendChild(td1);
-      tr.appendChild(td2);
-      tfootElement.appendChild(tr);
-
-      couponDivElement.classList.add("hidden");
-      const priceAfterDiscount = totalPrice - totalPrice * discount;
-
-      grandTotalElement.textContent = priceAfterDiscount;
+      applyDiscount(15);
    } else if (couponValue === "Coupon 20") {
-      const totalPrice = Number(totalPriceElement.textContent);
-      const discount = 0.2;
-
-      const tr = document.createElement("tr");
-      tr.classList.add("*:font-medium", "*:text-base", "*:text-our-black");
-
-      const td1 = document.createElement("td");
-      td1.setAttribute("colspan", "2");
-      td1.textContent = "Discount Value";
-
-      const td2 = document.createElement("td");
-      td2.classList.add("text-right");
-      td2.textContent = totalPrice * discount;
-
-      tr.appendChild(td1);
-      tr.appendChild(td2);
-      tfootElement.appendChild(tr);
-
-      couponDivElement.classList.add("hidden");
-      const priceAfterDiscount = totalPrice - totalPrice * discount;
-
-      grandTotalElement.textContent = priceAfterDiscount;
+      applyDiscount(20);
+   } else {
+      alert("Invalid Coupon Code");
    }
 });
 

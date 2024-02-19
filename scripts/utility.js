@@ -1,11 +1,39 @@
+// will open up the modal
 function success() {
    modal.classList.add("fixed");
    modal.classList.remove("hidden");
-   body.style.overflowY = "hidden";
+   body.style.overflow = "hidden";
 }
 
+// for closing the modal
 function closeModal() {
    modal.classList.remove("fixed");
    modal.classList.add("hidden");
-   body.style.overflowY = "auto";
+   body.style.overflow = "auto";
+}
+
+// after valid discount coupon is entered
+function applyDiscount(discountPercent) {
+   const totalPrice = Number(totalPriceElement.textContent);
+   const discount = discountPercent / 100;
+
+   const tr = document.createElement("tr");
+   tr.classList.add("*:font-medium", "*:text-base", "*:text-our-black");
+
+   const td1 = document.createElement("td");
+   td1.setAttribute("colspan", "2");
+   td1.textContent = "Discount Value";
+
+   const td2 = document.createElement("td");
+   td2.classList.add("text-right");
+   td2.textContent = totalPrice * discount;
+
+   tr.appendChild(td1);
+   tr.appendChild(td2);
+   tfootElement.appendChild(tr);
+
+   couponDivElement.classList.add("hidden");
+   const priceAfterDiscount = totalPrice - totalPrice * discount;
+
+   grandTotalElement.textContent = priceAfterDiscount;
 }
