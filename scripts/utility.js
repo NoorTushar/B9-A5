@@ -19,7 +19,13 @@ function applyDiscount(discountPercent) {
    const discount = discountPercent / 100;
 
    const tr = document.createElement("tr");
-   tr.classList.add("*:font-medium", "*:text-base", "*:text-our-black");
+   tr.classList.add(
+      "*:font-medium",
+      "*:text-base",
+      "*:text-our-black",
+      "border-b",
+      "border-gray-300"
+   );
 
    const td1 = document.createElement("td");
    td1.setAttribute("colspan", "2");
